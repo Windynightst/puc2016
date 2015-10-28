@@ -364,7 +364,318 @@ Secondly, the algorithm needs to choose the node to be moved down based on a cos
 Whether a node is a redundant node or not depends on the property of its neighbors in $L_0$ and $L_1$. Intuitively, if we can reduce the number of the nodes in $L_0$ and $L_1$, the constraint on redundant nodes might become weak, thus the number of the redundant nodes might increase. The only way to reduce the nodes in $L_0$ is to move down some nodes, while the way to reduce nodes in $L_1$ is to move fewer nodes from $L_0$ to $L_1$. In addition, a redundant node must be moved down to $L_1$ if it cannot be moved to $L_2$, that is, the neighbors in $L_2$ of the redundant node do not support it. Naturally, we tend to reduce the nodes in $L_2$. By that analogy, each time we move down a redundant node, the target layer should be as outer as possible. That is to say, the priority of an outer layer is higher than that of an inner layer.
 The example of our algorithm is in technique report \cite{ShiTech}.
 \subsubsection*{Performance Guarantee}
-According to Theorem 1, the $tPIDS$ problem is NP-Hard. Our greedy algorithm runs in $O(D^2*|V|^2)$ where $D$ is the maximum degree and $|V|$ is the number of the nodes in a network. %The extensive evaluation results also show that the performance and efficiency of our algorithm are convincing.
+According to Theorem 1, the $tPIDS$ problem is NP-Hard. Our greedy algorithm runs in $O(D^2*|V|^2)$ where $D$ is the maximum degree and $|V|$ is the number of the nodes in a network. The extensive evaluation results also show that the performance and efficiency of our algorithm are convincing.
+
+\subsection{The Correctness of the Move-Down Algorithm}
+
+Now we prove the result returned by our greedy algorithm is feasible. The proofs of these theorems are in our technique report\cite{ShiTech} .
+Firstly, we will show as long as all the nodes in a $t$ SPREAD graph satisfy Formula (1), $D_0$ is a valid $tPIDS$.
+This can be proven if we demonstrate that every node in $L_k$ will be influenced at time $k$ if it satisfies Formula (1).
+\begin{theorem}
+	A node is called an influence node iff it satisfies Formula (1).
+\end{theorem}
+
+\begin{proof}
+	Suppose node $v \in L_k$ and $D_{k-1}$ is the influence set at the current stage. The number of the neighbors in  $D_{k-1}$ of $v$ is denoted by $I_v$.\\
+	\emph{Necessity: }If $v$ is an influence node of $D_{k-1}$, then
+	\[ I_v \geqslant \lceil\frac{deg(v)}{2}\rceil .\]
+	According to the definition of a $t$-SPREAD graph,
+	\begin{equation}
+	I_v=R_v.
+	\end{equation}
+	Invoking Formula (1), Formula (3) can be rewritten as
+	\begin{equation}
+	R_v\geqslant \lceil\frac{R_v+C_v+P_v}{2}\rceil .
+	\end{equation}
+	Thus,
+	\begin{equation}
+	R_v \geqslant C_v+P_v
+	\end{equation}
+	which means that node $v$ satisfies Formula (1).\\
+	\emph{Sufficiency: }If node $v$ satisfies Formula (1), 
+	\begin{equation}
+	R_v\geqslant C_v+P_v .% (u \notin D_0)%(if\ u\in D_0,P_u \geqslant C_u)
+	\end{equation}
+	According to Formula (1),
+	\begin{equation}
+	C_v+P_v=deg(v)-R_v.
+	\end{equation}
+	Then we can obtain that
+	\begin{equation}
+	R_v \geqslant deg(v)-R_v
+	\end{equation}
+	which can be rearranged to give the following formula
+	\begin{equation}
+	R_v \geqslant \lceil\frac{deg(v)}{2}\rceil .
+	\end{equation}
+	Obviously,
+	\begin{equation}
+	I_v=R_v.
+	\end{equation}
+	Thus,
+	\begin{equation}
+	I_v \geqslant \lceil\frac{deg(v)}{2}\rceil .
+	\end{equation}
+	Then $v$ is an influence node of $D_{k-1}$.
+\end{proof}
+
+Theorem \ref{theo3} demonstrates that all the nodes will not be affected by a move-down operation.
+\begin{theorem} \label{theo3}
+	For a node $v$ in $L_0$ or $L_1$, if it satisfies Formula (1) in the first place, then it still satisfies Formula (1) after we move down any node in $L_0$.
+\end{theorem}
+
+\begin{proof}
+	Apparently, for any node $v$ which is not adjacent to $u$, moving down $u$ has no influence on $v$. Thus, we just need to consider the nodes adjacent to $u$.
+	Since $L_0$ is the initial influence set, any node $u$ in $L_0$ must satisfy the following:
+	\begin{eqnarray}
+	P_u \geqslant C_u\\
+	R_u=0
+	\end{eqnarray}
+	That is to say, at least half of the neighbors of $u$ are in $L_0$.
+%	
+	We know that any node needed to be moved down must be a redundant node. Suppose that $u$ is a redundant node in layer 0, according to the definition of redundant node, for any node $v$ in $L_0$ which is adjacent to $u$, $v$ satisfies $P_v-1 \geqslant C_v+1$. Let $C^{'}_v$ and $P^{'}_v$ be the new value of $C_v$ and $P_v$ respectively.
+%	
+	\begin{eqnarray}
+	P^{'}_v&=& P_v-1\\
+	C^{'}_v&=& C_v+1
+	\end{eqnarray}
+	Obviously, $v$ still satisfies
+	\[ P^{'}_v=P_v-1\geqslant C_v+1=C^{'}_v .\]
+	For any node $v$ in layer 1 which is adjacent to $u$, there are two cases:\\
+%	\begin{enumerate}
+	\noindent 1) If $C_u=0$, then moving $u$ down will not influence the nodes in layer 1 to layer $t$.\\
+	\noindent 2) If $C_u \neq 0$, for any node $w$ in layer 1 which is adjacent to $u$, $R^{'}_w,~C^{'}_w$ and $P^{'}_w$ will be the new value of $R_w,~C_w$ and $P_w$ respectively.
+%	
+	\begin{eqnarray}
+	R^{'}_w&=& R_w-1\\
+	C^{'}_w&=& C_w\\
+	P^{'}_w&=& P_w+1
+	\end{eqnarray}
+	
+	According to the definition of redundant node, node $w$ must satisfy the following relation
+	\begin{equation}
+	R_w-1\geqslant C_w+(1+P_w).
+	\end{equation}
+	Thus, $R^{'}_w \geqslant C^{'}_w+P^{'}_w$.
+	  % \end{enumerate}
+\end{proof}
+
+Moving down redundant nodes is an effective way to reduce the size of $D_0$.
+
+\begin{figure}[!htb]
+	%\label{fig:th1}
+	\centering
+	\subfigure[$j \neq 0$]
+	{\label{fig:th1:a}\includegraphics[width=0.23\textwidth]{21.eps}}\hfil
+	\subfigure[$j = 0$]
+	{\label{fig:th1:b}\includegraphics[width=0.23\textwidth]{20.eps}}\hfil
+	\caption{Initial status.}
+	%\label{fig:th1}
+\end{figure}
+\begin{figure}[!htb]
+	%\label{fig:th2}
+	\centering
+	\subfigure[$j \neq 0$]
+	{\label{fig:th2:a}\includegraphics[width=0.23\textwidth]{16.eps}} \hfil
+	\subfigure[$j = 0$]
+	{\label{fig:th2:b}\includegraphics[width=0.23\textwidth]{18.eps}} \hfil
+	\caption{Results of moving down $v_i$}
+	%\label{fig:th2}
+\end{figure}
+\begin{figure}[!htb]
+%	\label{fig:th3}
+	\centering
+	\subfigure[$j = k$]{\includegraphics[width=0.23\textwidth]{23.eps}}
+	\caption{The result of moving down $v_i$.}
+	\label{fig:th3}
+\end{figure}
+\begin{theorem}
+	Moving down a redundant node will influence the $P$, $R$, and $C$ values of its neighbors.
+\end{theorem}
+\begin{proof}
+	We assume that $v_i$ is a redundant node in $L_0$ and $v_j$ is its neighbor in $L_j$. When we moving $v_i$ down from $L_0$ to $L_k$, there are three cases:
+	\begin{enumerate}
+		\item If $j > k$, that is, $v_i$ is moved to the inner layer of $L_j$, then the values of $P$, $R$, and $C$ remain the same.
+		\item If $j < k$, that is, $v_i$ is moved to the outer layer of $L_j$, and then as shown in Fig.\ref{fig:th1:a} and Fig.\ref{fig:th1:b}, two statuses should be taken into account:\\
+		If $j = 0$, that is, $v_j$ belongs to $L_0$, then
+		\begin{eqnarray}
+		P_{v_j} &=& P_{v_j}-1\\
+		R_{v_j} &=& 0\\
+		C_{v_j} &=& C_{v_j}+1
+		\end{eqnarray}
+		
+		Otherwise,
+		\begin{eqnarray}
+		P_{v_j} &=& P_{v_j}\\
+		R_{v_j} &=& R_{v_j}-1\\
+		C_{v_j} &=& C_{v_j}+1
+		\end{eqnarray}
+		The results of two statuses are shown in Fig.\ref{fig:th2:a} and Fig.\ref{fig:th2:b}.
+		\item As shown in Fig.\ref{fig:th3}, if $j = k$, that is, $v_i$ is moved down from $L_0$ to the same layer as $v_j$, then
+		\begin{eqnarray}
+		P_{v_j} &=& P_{v_j}+1\\
+		R_{v_j} &=& R_{v_j}-1\\
+		C_{v_j} &=& C_{v_j}
+\end{eqnarray}
+		
+\end{enumerate}
+%	
+\end{proof}
+\begin{figure}[!htb]
+	\centering
+	\subfigure[~]
+	{\label{fig:th4:a}\includegraphics[width=0.23\textwidth]{24.eps}
+		\label{fig:th4:b}\includegraphics[width=0.23\textwidth]{29.eps}}
+	\caption{Example of a redundant node becoming a non-redundant node.}
+	\label{fig:th4}
+\end{figure}
+\begin{figure}[!htb]
+	\centering
+	\subfigure[~]
+	{\label{fig:th5:a}\includegraphics[width=0.23\textwidth]{31.eps}
+		\label{fig:th5:b}\includegraphics[width=0.23\textwidth]{37.eps}}
+	\caption{Example of a non-redundant node becoming a redundant node.}
+	\label{fig:th5}
+\end{figure}
+
+\begin{theorem}
+	After we moving down a redundant node, some redundant nodes may become non-redundant nodes and some non-redundant nodes may become redundant nodes.
+\end{theorem}
+\begin{proof}
+We assume that $v_i$ is a redundant node in $L_0$ and $v_j$ is its neighbor in $L_j$. When moving $v_i$ down from $L_0$ to $L_k$, according to Theorem 4, the values of $P$, $R$ and $C$ of $v_j$ may be changed. If the new values of the three variables satisfy the following condition
+	\[ j=0, P-C<2 \]
+	or
+	\[ j=1, R-P-C<2 \]
+that is, $v_j$ does not satisfy Formula (1) any more, then all of the redundant nodes adjacent to $v_j$ become non-redundant.\\
+A node is called a redundant node if and only if all of its neighbors in $L_0$ and $L_1$ satisfy Formula (1). As shown in Fig.\ref{fig:th4}, assume that $v_j$ is a neighbor in $L_0$ of $v_i$, and $v_j$ is a non-redundant node before $v_i$ is moved down. Furthermore, suppose that $v_i$ not satisfying Formula (1) after moving down $v_j$ is the exact reason why $v_j$ is a non-redundant node. As shown in Fig.\ref{fig:th5}, if $v_i$ is moved down from $L_0$ to a layer between $L_2$ and $L_t$, then $v_j$ becomes redundant because all of its neighbors in $L_0$ and $L_1$ satisfy Formula (1). In other words, moving down $v_i$ may cause some of its neighbors in $L_0$, such as $v_j$, to become redundant.
+	
+\end{proof}
+
+\section{Experiments}
+We conduct experiments on both synthetic and real-world networks to evaluate the performance and efficiency of our greedy algorithm. Our experiments aim at illustrating the effect of the properties of the given graph $G$, such as the number of the nodes, average degree and times of spreading, on the performance of our algorithm involving the size of $D_0$, the percentage of $D_0$ in $V$ and the runtime of the algorithm. Moreover, we compare our algorithm with the work in \cite{WDC2011} for that the $PIDS$ problem is a special case of our $tPIDS$ problem.
+
+\subsection{Data set}
+
+We use the SNAP tools provided by \cite{snap} to generate Erdos-Renyi network graphs, for the reason that we only consider the loosely structured networks with roughly uniform degree of nodes. As shown in Table \ref{tab:t1}, we generate a lot of networks with different numbers of nodes and average degree. 
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		Nodes & \multicolumn{1}{c|}{Edges} & Average Degree \\ \hline
+		200   & 300,400                    & 3,4            \\ \hline
+		300   & 450                        & 3              \\ \hline
+		400   & 600                        & 3              \\ \hline
+		500   & 750,1000,2000,4000         & 3,4,8,16       \\ \hline
+		600   & 900                        & 3              \\ \hline
+		800   & 1200                       & 3              \\ \hline
+		1000  & 1500,2000,4000,8000        & 3,4,8,16       \\ \hline
+		2000  & 4000                       & 4              \\ \hline
+		5000  & 7500,10000,15000,30000     & 3,4,6,12       \\ \hline
+		10000 & 15000                      & 3              \\ \hline
+	\end{tabular}
+	\caption{The information of all the networks.}
+	\label{tab:t1}
+\end{table}
+%\vspace{-0.3cm}
+\begin{figure}[!htb]
+	\subfigure[Network with 1000 nodes]
+	{\label{fig:e1:b}\includegraphics[width=0.23\textwidth, height=2cm ]{1000-1-4.eps}}
+	\subfigure[Network with 5000 nodes ]
+	{\label{fig:e1:c}\includegraphics[width=0.23\textwidth, height=2cm]{5000-d0.eps}}
+	\caption{The impact of average degree}
+\end{figure}
+
+\begin{figure}[!htb]
+	\subfigure[Average degree is 3]
+	{\label{fig:e1:d}\includegraphics[width=0.23\textwidth, height=2cm]{200-500-3.eps}}
+	\subfigure[Average degree is 4]
+	{\label{fig:e1:e}\includegraphics[width=0.23\textwidth, height=2cm]{200-500-4.eps}}
+	\caption{The impact of number of nodes}
+\end{figure}
+
+\begin{figure}[!htb]
+	\subfigure[The impact of number of nodes]
+	{\label{fig:e1:f}\includegraphics[width=0.23\textwidth, height=2cm]{2000-5000-10000.eps}}
+	\subfigure[The impact of average degree]
+	{\label{fig:e1:g}\includegraphics[width=0.23\textwidth, height=2cm]{5000-1-4.eps}}
+	\caption{The impact of network size and average degree}
+\end{figure}
+
+\begin{figure}[!htb]
+	\subfigure[Performance on real-world networks(The size of $D_0$)]
+	{\label{fig:e2:a}\includegraphics[width=0.23\textwidth, height=2cm]{real-d0.eps}} \hfil
+	\subfigure[Performance on real-world networks(The running time)]
+	{\label{fig:e2:b}\includegraphics[width=0.23\textwidth, height=2cm]{real-time.eps}}
+	\caption{Performance on real-world networks}
+\end{figure}
+\subsection{The impact of average degree}
+%\vspace{-0.2cm}
+To study the impact of average degree, we consider the networks with 1000 and 5000 nodes respectively, as shown in  Fig.\ref{fig:e1:b} and Fig.\ref{fig:e1:c}. For each network, we set the average degree as 3, 4, 8, and 16 and plot the relationship between the size of $D_0$ and the spread times $t$. Intuitively, the interdependence among the nodes is stronger in networks with large average degrees than those with small average degrees. We find that the size of $D_0$ does not continuously decrease dramatically when $t$ is larger than 4, so we just consider the situations with $t$ smaller than 4. Fig.\ref{fig:e1:b} and Fig.\ref{fig:e1:c} show that the size of $D_0$ in $V$ decreases as $t$ increases. On average, in the network whose average degree is 16, 2PIDS reduces by about 5.0\% compared with 1PIDS, while 4PIDS decreases by about 7.0\% compared with 1PIDS. However, on average, in the network whose average degree is 3, 2PIDS reduces by about 11.8\% compared with 1PIDS, while 4PIDS decreases by about 18.9\% compared with 1PIDS. When the average degree is much larger, the size of $D_0$ decreases more slowly.
+In a word, for the network with the same number of nodes, our greedy algorithm performs well for both large average degree and small average degree. But the result obtained from the network with small average degree is much better.
+%\vspace{-0.51cm}
+\subsection{The impact of number of nodes}
+%\vspace{-0.2cm}
+%\textbf{The accuracy of the two algorithms}.
+To study the impact of number of nodes, we consider the networks with 200, 500, 1000 and 2000 nodes respectively, as shown in Fig.\ref{fig:e1:d} and Fig.\ref{fig:e1:e}. In Fig.\ref{fig:e1:d} the average degree is 3 for each network and in Fig.\ref{fig:e1:d} the average degree is 4. We plot the relationship between the percentage of $D_0$ in $V$ and the spreading times $t$. In Fig.\ref{fig:e1:d}, the x-axis represents the times of spreading and the y-axis represents the percentage of $D_0$ in $V$. Apparently, the percentage of $D_0$ in $V$ decreases more or less due to the increasing spreading times $t$. For all of the above networks, the percentage of $D_0$ in $V$ decreases to about 40\% when $t$ grows to 4. In other words, we can choose a subset with only 40\% individuals of the society rather than the whole society to influence all the other individuals in 4 steps using our algorithm. The cost of choosing initial influence set is reduced largely. The situations of the 4 different networks are similar. Our greedy algorithm performs a little better in the networks with more nodes, since the average degree is the same. For example, when the average degree is 3, the interdependence of nodes is stronger in the network with 200 nodes. Generally speaking, the number of nodes does not affect the performance of our greedy algorithm much in condition that the interdependence among nodes is weak.
+%\begin{figure}[!htb]
+%	\centering
+%	\subfigure[average degree is 3]
+%	{\label{fig:e2:a}\includegraphics[width=0.23\textwidth]{200-500-3.eps}}
+%	\hfil
+%	\subfigure[average degree is 4]
+%	{\label{fig:e2:b}\includegraphics[width=0.23\textwidth]{200-500-4.eps}}
+%	\caption{Impact of number of nodes.}
+%	\label{fig:e2}
+%\end{figure}
+\subsection{The impact of network size and average degree on time efficiency}
+
+To study the impact of nodes numbers on time efficiency of our greedy algorithm, we consider the networks with 2000, 5000 and 10000 nodes respectively, as shown in Fig.\ref{fig:e1:f}. The average degree of the network is set to 3. In Fig.\ref{fig:e1:f}, the x-axis represents the times of spreading and the y-axis represents the running time of our greedy algorithm. The histogram shows the relationship between running time and the times of spreading for the networks with different numbers of nodes. Visually, the running time of our algorithm increases slowly as the increasing spreading times increases. For example, consider the situation when $t$ is 3. For the network with 2000, 5000, and 10000 nodes, the cost of our algorithm is roughly 10, 500 and 4000 seconds respectively. To study the impact of average degree on time efficiency, we consider the network with 5000 nodes. The average degree is set to 3, 4, 6 and 12 respectively, as shown in Fig.\ref{fig:e1:g}. Intuitively, when the average degree is 3, the running time of our algorithm is less than 500 seconds, while the running time doubles when the average degree is larger. That is to say, our algorithm performs much better for sparse networks,  such as the disruption tolerant networks \cite{ShiNew/ZWLDC2014}.
+For real-world social networks with millions of nodes, our algorithm is also feasible since a large network with weak interdependence among nodes can be divided into a sequence of strongly connected components, which contain much fewer individuals and can be served by our algorithm in an acceptable time bound.
+%\begin{figure}[!htb]
+%\centering
+%\subfigure[a]
+%{\label{fig:e3:a}\includegraphics[width=0.23\textwidth]{2000-5000-10000.eps}}
+%\subfigure[b]
+%{\label{fig:e3:b}\includegraphics[width=0.23\textwidth]{5000-4-time.eps}} \hfil
+%\caption{Performance in large networks.}
+%\label{fig:e3}
+%\end{figure}
+\subsection{Comparison with the PIDS algorithm in \cite{WDC2011}}
+The goal of the PIDS problem is to find a dominant set $D_0$ such that all the other nodes can be 
+influenced by $D_0$ instantly, while the purpose of our tPIDS problem is to find a dominant set $D_0$ to
+influence other individuals in a certain bounded time period. 
+It is clear that the PIDS problem is a particular case of our tPIDS problem when $t$ is 1, that is, PIDS is equivalent to 1PIDS.
+Then our greedy algorithm is also feasible for the PIDS problem. 
+To compare our greedy algorithm with the algorithm in \cite{WDC2011}, we consider the network with 500
+and 1000 nodes respectively and set the average degree to 3. As shown in Fig.\ref{fig:e1:h},
+the x-axis represents the number of nodes in the graph and y-axis represents the size of the 
+initial influence set $D_0$. Our result is almost the same as that of \cite{WDC2011}. 
+However, the time efficiency of our algorithm is much better than that of \cite{WDC2011}. 
+In Fig.\ref{fig:e1:i}, the x-axis represents the number of nodes in the graph and y-axis represents the running time
+of the algorithm. In the network with 500 nodes, the running time of our algorithm is about 1 second 
+while the running time of the algorithm in \cite{WDC2011} is over 22 seconds. 
+In the network with 1000 nodes, the running time of our algorithm is about 8 seconds while the running time of the algorithm in \cite{WDC2011} is over 180 seconds. Our algorithm is almost 20 times faster than the algorithm in \cite{WDC2011}.
+\textbf{The difference between the two algorithms}.
+%\begin{figure}[!htb]
+%\subfigure[Comparison about the size of $D_0$]
+%{\label{fig:e4:a}\includegraphics[width=0.23\textwidth]{our-wang.eps}} \hfil
+%\subfigure[Comparison about time ]
+%{\label{fig:e4:b}\includegraphics[width=0.23\textwidth]{our-wang-time.eps}}
+%\caption{Performance of the Proposed Algorithms.}
+%\label{fig:e4}
+%\end{figure}
+
+\subsection{Performance on real-world networks}
+
+In addition to simulated experiments, we conduct experiments based on realistic trace data sets provided by \cite{sju}. The given data set records the real-time longitude and latitude of 2370 taxies during half a month. Once two taxis appear in the same place at the same time, they will exchange some information. If the encounter time is greater than a constant, then we can consider that there is an edge between these two taxis. The taxi network contains 2370 nodes and 7631 edges, and the average degree is about 6.44. This taxi network is a mobile social network, which is a kind of social network and has been widely studied these years.  Fig.\ref{fig:e2:a} and \ref{fig:e2:b} shows the result of our algorithm on the given network.
+As shown in Fig.\ref{fig:e2:a}, the percentage of 1PIDS, 2PIDS, 3PIDS and 4PIDS in the whole network is about 50.0\%, 45.3\%, 43.5\% and 42.7\% respectively. 2PIDS reduces by 9.4\% and 4PIDS reduces by 14.6\% compared with 1PIDS. That is, in order to send some information to all the 2370 taxies, one can choose about 42.7\% of the whole individuals. After 4 times of spread, all the taxies would receive the information. As shown in Fig.\ref{fig:e2:b}, the running time of 1PIDS, 2PIDS, 3PIDS and 4PIDS is 112s, 137s, 141s and 143s respectively. Evidently, the marginal utility of the running time decreases as the times of spread increases. The performance and time efficiency of our greedy algorithm are acceptable and feasible on the real-world networks.
+\vspace{-0.65cm}
+\section{Conclusion}
+This paper takes the first step towards the $t$ Positive Influence Dominating Set problem in social networks.
+The $tPIDS$ problem takes the time factor, positive and group-to-individual interaction into account which is more practical in real social networks.
+We build the $t$ SPREAD graph for a network and design a corresponding greedy algorithm. We also prove several significant theorems to support our algorithm.
+We conduct extensive experiments on some randomly generated graphs and a real-world mobile social network. Our greedy algorithm works much better on loosely structured networks with roughly uniform degree of nodes.
+The algorithm can reduce the percentage of initial nodes to about 40\%. 4PIDS reduces about 15\%-20\% compared with 1PIDS. Moreover, the running time of our algorithm is reasonable and acceptable.The experiment results show that our algorithm is effective and efficient. To some extent, as for the PIDS problem, our greedy algorithm performs better than the algorithm in \cite{WDC2011} especially on the aspect of effectiveness.
 %\begin{acknowledgements}
 %If you'd like to thank anyone, place your comments here
 %and remove the percent signs.

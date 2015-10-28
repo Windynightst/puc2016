@@ -1,24 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex 2015.7.30)  27 OCT 2015 23:55
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2015.10.17)  28 OCT 2015 13:14
 entering extended mode
- restricted \write18 enabled.
- Source specials enabled.
- %&-line parsing enabled.
 **ShiPuc2016-151027.tex
-(./ShiPuc2016-151027.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fix-cm.sty
-Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+(D:\360data\重要数据\桌面\puc2016\ShiPuc2016-151027.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(d:\CTEX\MiKTeX\tex\latex\base\fix-cm.sty
+Package: fix-cm 2006/09/13 v1.1m fixes to LaTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1enc.def
+(d:\CTEX\MiKTeX\tex\latex\base\ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-)) (./svjour3.cls
+))
+(D:\360data\重要数据\桌面\puc2016\svjour3.cls
 Document Class: svjour3 2007/05/08 v3.2 
 LaTeX document class for Springer journals
 Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
 (Springer-SVJour3)           not found in option list of \documentclass
 (Springer-SVJour3)           - autoactivating "global" style.
-(./svglov3.clo
+(D:\360data\重要数据\桌面\puc2016\svglov3.clo
 File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
 
 SVJour Class option: svglov3.clo for standardised journals
@@ -79,35 +77,35 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
 \figgap=\dimen112
 \bibindent=\dimen113
 \@tempcntc=\count104
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+) (d:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(d:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(d:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+(d:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(d:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: dvips.def on input line 94.
+Package graphics Info: Driver file: dvips.def on input line 91.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
+(d:\CTEX\MiKTeX\tex\latex\graphics\dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen114
 \Gin@req@width=\dimen115
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithms/algorithm.sty
+(d:\CTEX\MiKTeX\tex\latex\algorithms\algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+(d:\CTEX\MiKTeX\tex\latex\float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count105
 \float@exts=\toks17
@@ -115,13 +113,13 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks18
 \@floatcapt=\box30
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+(d:\CTEX\MiKTeX\tex\latex\base\ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks19
 \c@algorithm=\count106
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+(d:\CTEX\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -135,56 +133,56 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@storecount=\count112
 \c@ALG@tmpcounter=\count113
 \ALG@tmplength=\skip45
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+) (d:\CTEX\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
 Package: algpseudocode 
 
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (d:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2009/06/22 v3.00
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+(d:\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks20
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(d:\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+(d:\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks21
 \ex@=\dimen116
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(d:\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen117
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+(d:\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count114
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count115
 \leftroot@=\count116
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count117
 \DOTSCASE@=\count118
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box31
 \strutbox@=\box32
 \big@size=\dimen118
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 
 
 Package amsmath Warning: Unable to redefine math accent \vec.
@@ -209,9 +207,9 @@ Package amsmath Warning: Unable to redefine math accent \vec.
 \multlinegap=\skip47
 \multlinetaggap=\skip48
 \mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/footmisc/footmisc.sty
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (d:\CTEX\MiKTeX\tex\latex\footmisc\footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks26
 \footnotemargin=\dimen125
@@ -225,8 +223,8 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.sty
-Package: subfigure 2002/03/15 v2.1.5 subfigure package
+(d:\CTEX\MiKTeX\tex\latex\subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip49
 \subfigcapskip=\skip50
 \subfigcaptopadj=\dimen126
@@ -241,16 +239,14 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(d:\CTEX\MiKTeX\tex\latex\subfigure\subfigure.cfg)
 \subfig@top=\skip53
 \subfig@bottom=\skip54
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/indentfirst.sty
+(d:\CTEX\MiKTeX\tex\latex\tools\indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(./ShiPuc2016-151027.aux)
-\openout1 = `ShiPuc2016-151027.aux'.
-
+(D:\360data\重要数据\桌面\puc2016\ShiPuc2016-151027.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
@@ -271,13 +267,13 @@ Unknown journal: specify \journalname{<name of your journal>} in preambel
 SVJour3 warning: Missing \journalname
 LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 118.
 LaTeX Font Info:    Try loading font information for U+msa on input line 118.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+(d:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 118.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+(d:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1] [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -293,37 +289,119 @@ Overfull \hbox (1.88892pt too wide) in paragraph at lines 244--249
 [] [] 
  []
 
-
-Overfull \hbox (5.68755pt too wide) in paragraph at lines 264--268
-[][]\OT1/cmr/bx/n/9.5 (Time-bounded Pos-i-tive In-flu-ence Dom-i-nat-ing Set (t
-PIDS))
- []
-
 [5] [6]
 Overfull \hbox (20.16785pt too wide) in paragraph at lines 323--328
-[][]\OT1/cmr/bx/n/9.5 (Redundant Node) \OT1/cmr/m/n/9.5 For any node $\OML/cmm/
-m/it/9.5 u$ \OT1/cmr/m/n/9.5 in $\OML/cmm/m/it/9.5 D[]$\OT1/cmr/m/n/9.5 , $\OML
-/cmm/m/it/9.5 u$ \OT1/cmr/m/n/9.5 is called a $\OML/cmm/m/it/9.5 redundant []no
-de$
+[][]\OT1/cmr/bx/n/9.5 (Redundant N-ode) \OT1/cmr/m/n/9.5 For any n-ode $\OML/cm
+m/m/it/9.5 u$ \OT1/cmr/m/n/9.5 in $\OML/cmm/m/it/9.5 D[]$\OT1/cmr/m/n/9.5 , $\O
+ML/cmm/m/it/9.5 u$ \OT1/cmr/m/n/9.5 is called a $\OML/cmm/m/it/9.5 redundant []
+node$
  []
 
-[7] [8] (./ShiPuc2016-151027.bbl
+[7] [8] [9] [10]
+File: 21.eps Graphic file (type eps)
+ <21.eps>
+File: 20.eps Graphic file (type eps)
+ <20.eps>
+File: 16.eps Graphic file (type eps)
+ <16.eps>
+File: 18.eps Graphic file (type eps)
+ <18.eps>
+File: 23.eps Graphic file (type eps)
+ <23.eps> [11]
+File: 24.eps Graphic file (type eps)
+ <24.eps>
+File: 29.eps Graphic file (type eps)
+
+<29.eps>
+File: 31.eps Graphic file (type eps)
+ <31.eps>
+File: 37.eps Graphic file (type eps)
+ <37.eps> [12]
+File: 1000-1-4.eps Graphic file (type eps)
+ <1000-1-4.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 582--582
+[]\OT1/cmr/m/n/8 (a) Net-work with
+ []
+
+File: 5000-d0.eps Graphic file (type eps)
+<5000-d0.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
+[][]\OT1/cmr/m/n/8 (b) Net-work with
+ []
+
+[13]
+File: 200-500-3.eps Graphic file (type eps)
+ <200-500-3.eps>
+File: 200-500-4.eps Graphic file (type eps)
+ <200-500-4.eps>
+File: 2000-5000-10000.eps Graphic file (type eps)
+ <2000-5000-10000.eps>
+Underfull \hbox (badness 5119) in paragraph at lines 598--598
+[]\OT1/cmr/m/n/8 (a) The im-pact of
+ []
+
+File: 5000-1-4.eps Graphic file (type eps)
+<5000-1-4.eps>
+File: real-d0.eps Graphic file (type eps)
+ <real-d0.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
+[]\OT1/cmr/m/n/8 (a) Per-for-mance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
+\OT1/cmr/m/n/8 on real-world net-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
+\OT1/cmr/m/n/8 work-s(The size of
+ []
+
+File: real-time.eps Graphic file (type eps)
+<real-time.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 608--608
+[][]\OT1/cmr/m/n/8 (b) Per-for-mance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 608--608
+\OT1/cmr/m/n/8 on real-world net-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 608--608
+\OT1/cmr/m/n/8 work-s(The run-ning
+ []
+
+[14] [15]
+
+LaTeX Warning: Reference `fig:e1:h' on page 16 undefined on input line 650.
+
+
+LaTeX Warning: Reference `fig:e1:i' on page 16 undefined on input line 654.
+
+[16] (D:\360data\重要数据\桌面\puc2016\ShiPuc2016-151027.bbl [17]
 Missing character: There is no � in font cmr8!
 Missing character: There is no � in font cmr8!
- [9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 101--104
-[][]\OT1/cmr/m/n/8 Time-bounded pos-i-tive in-flu-ence in so-cial net-works.  U
-RL
+[][]\OT1/cmr/m/n/8 Time-bounded pos-i-tive in-flu-ence in so-cial net-work-s.  
+URL http-
  []
 
-) [10] (./ShiPuc2016-151027.aux) ) 
-Here is how much of TeX's memory you used:
- 3060 strings out of 493094
- 41665 string characters out of 6135015
- 101743 words of memory out of 5000000
- 6507 multiletter control sequences out of 15000+600000
- 16390 words of font info for 61 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 27i,14n,26p,1457b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
+) [18] (D:\360data\重要数据\桌面\puc2016\ShiPuc2016-151027.aux)
 
-Output written on ShiPuc2016-151027.dvi (10 pages, 45236 bytes).
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3133 strings out of 495355
+ 41609 string characters out of 3183881
+ 96385 words of memory out of 3000000
+ 6248 multiletter control sequences out of 15000+200000
+ 16390 words of font info for 61 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 27i,14n,24p,1458b,310s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on ShiPuc2016-151027.dvi (18 pages, 78772 bytes).

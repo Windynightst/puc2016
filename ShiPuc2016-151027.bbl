@@ -102,4 +102,14 @@ Time-bounded positive influence in social networks.
 \newblock
   \urlprefix\url{https://www.dropbox.com/s/v68oihergag7l8h/tPIDSTR.pdf?dl=0}
 
+\bibitem{snap}
+J.~Leskovec, R.~Sosi\v{c}.
+\newblock {SNAP}: A general purpose network analysis and graph mining library
+  in {C++}.
+\newblock \url{http://snap.stanford.edu/snap} (2014)
+
+\bibitem{ShiNew/ZWLDC2014}
+L.~Zhang, X.~Wang, J.~Lu, M.~Ren, Z.~Duan, Z.~Cai, Transactions on Emerging
+  Telecommunications Technologies  (2014)
+
 \end{thebibliography}
