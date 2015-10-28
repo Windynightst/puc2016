@@ -1,0 +1,105 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Think2014}
+\url{http://www.tns-opinion.com/sites/default/files/THINK\%209.pdf}
+
+\bibitem{ShiNew/WLZC2015}
+X.~Wang, Y.~Lin, S.~Zhang, Z.~Cai, Enterprise Information Systems pp. 1--30
+  (2015)
+
+\bibitem{ShiNew/WCDD2015}
+Y.~Wang, G.~Yin, Z.~Cai, Y.~Dong, H.~Dong, Journal of Network and Computer
+  Applications  (2015)
+
+\bibitem{ShiNew/HCW2015}
+Z.~He, Z.~Cai, X.~Wang, in \emph{The 35th IEEE International Conference on
+  Distributed Computing Systems, Columbus, Ohio, USA} (2015)
+
+\bibitem{ShiNew/WCGP2015}
+Y.~Wang, Z.~Cai, G.~Yin, Y.~Gao, Q.~Pan, in \emph{Computational Social
+  Networks} (Springer, 2015), pp. 236--247
+
+\bibitem{JBD2005}
+J.~Jaccard, H.~Blanton, T.~Dodge, Developmental Psychology p. 135147 (2005)
+
+\bibitem{KLA2013}
+D.~Kim, D.~Li, O.~Asgari, Y.~Li, A.O. Tokuta, in \emph{COCOON} (2013), pp.
+  841--848
+
+\bibitem{WDC2011}
+F.~Wang, H.~Du, E.~Camacho, K.~Xu, W.~Lee, Y.~Shi, S.~Shan, Theoretical
+  Computer Science \textbf{412}(3), 265 (2011)
+
+\bibitem{KKT2003}
+D.~Kempe, J.~Kleinberg, E.~Tardos, in \emph{SIGKDD} (2003), pp. 461--467
+
+\bibitem{sju}
+Suvnet-trace data.
+\newblock \urlprefix\url{http:/wirelesslab.sjtu.edu.cn}
+
+\bibitem{RD2002}
+M.~Richardson, P.~Domingos, in \emph{Proceedings of the 8th ACM SIGKDD
+  Conferenceon Knowledge Discovery and Data Mining} (2002), pp. 61--70
+
+\bibitem{KS2006}
+M.~Kimura, K.~Saito, in \emph{Principles and Practice of Knowledge Discovery in
+  Databases} (2006), pp. 259--271
+
+\bibitem{LKG2007}
+J.~Leskovec, A.~Krause, C.~Guestrin, C.~Faloutsos, J.~VanBriesen, N.~Glance, in
+  \emph{Proceedings of the 13th ACM SIGKDD international conference on
+  Knowledge discovery and data mining} (2007), Proceedings of the 13th ACM
+  SIGKDD international conference on Knowledge discovery and data mining, pp.
+  420--429.
+\newblock 1281239
+
+\bibitem{CWY2009}
+W.~Chen, Y.~Wang, S.~Yang, in \emph{Proceedings of the 15th ACM SIGKDD
+  international conference on Knowledge discovery and data mining} (2009),
+  Proceedings of the 15th ACM SIGKDD international conference on Knowledge
+  discovery and data mining, pp. 199--208
+
+\bibitem{LLL2012}
+X.~Liu, S.~Li, X.~Liao, L.~Wang, Q.~Wu, in \emph{Proceedings of the Fifth
+  Workshop on Social Network Systems} (2012), Proceedings of the Fifth Workshop
+  on Social Network Systems, pp. 1--6
+
+\bibitem{SDE2012}
+D.~Sheldon, B.~Dilkina, A.~Elmachtoub, R.~Finseth, et~al., arXiv preprint
+  arXiv:1203.3514  (2012)
+
+\bibitem{JHC2011}
+K.~Jung, W.~Heo, W.~Chen, arXiv preprint arXiv:1111.4795  (2011)
+
+\bibitem{WCS2010}
+Y.~Wang, G.~Cong, G.~Song, K.~Xie, in \emph{Proceedings of the 16th ACM SIGKDD
+  international conference on Knowledge discovery and data mining} (2010), pp.
+  1039--1048
+
+\bibitem{GWL2009}
+X.~Gao, Y.~Wang, X.~Li, W.~Wu, Discrete Mathematics, Algorithms and
+  Applications \textbf{1}(1), 71 (2009)
+
+\bibitem{ZWW2011}
+W.~Zhang, W.~Wu, F.~Wang, K.~Xu, Social Network Analysis and Mining
+  \textbf{2}(1), 31 (2011)
+
+\bibitem{CLZ2012}
+W.~Chen, W.~Lu, N.~Zhang,  (2012)
+
+\bibitem{DSN2014}
+T.~Dinh, Y.~Shen, D.~Nguyen, M.~Thai, Journal of Combinatorics Optimization
+  \textbf{27}(3), 487 (2014)
+
+\bibitem{ShiTech}
+Time-bounded positive influence in social networks.
+\newblock
+  \urlprefix\url{https://www.dropbox.com/s/v68oihergag7l8h/tPIDSTR.pdf?dl=0}
+
+\end{thebibliography}

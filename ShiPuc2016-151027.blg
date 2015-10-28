@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ShiPuc2016-151027.aux
+The style file: spphys.bst
+Database file #1: ChengSocial.bib
+Repeated entry---line 253 of file ChengSocial.bib
+ : @article{GWL2009
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 327 of file ChengSocial.bib
+ : @inproceedings{CLZ2012
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "sju" isn't style-file defined
+--line 465 of file ChengSocial.bib
+Warning--entry type for "ShiTech" isn't style-file defined
+--line 483 of file ChengSocial.bib
+Warning--empty booktitle in CLZ2012
+You've used 23 entries,
+            2812 wiz_defined-function locations,
+            735 strings with 8498 characters,
+and the built_in function-call counts, 12656 in all, are:
+= -- 1276
+> -- 263
+< -- 11
++ -- 156
+- -- 80
+* -- 532
+:= -- 1077
+add.period$ -- 3
+call.type$ -- 23
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 1509
+empty$ -- 1033
+format.name$ -- 100
+if$ -- 2844
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 222
+newline$ -- 80
+num.names$ -- 20
+pop$ -- 657
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 754
+stack$ -- 0
+substring$ -- 506
+swap$ -- 1180
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 57
+width$ -- 25
+write$ -- 185
+(There were 2 error messages)
