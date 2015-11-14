@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2015.10.17)  28 OCT 2015 19:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2015.10.17)  30 OCT 2015 19:41
 entering extended mode
 **ShiPuc2016-151027.tex
 (D:\360data\重要数据\我的文档\GitHub\puc2016\ShiPuc2016-151027.tex
@@ -293,21 +293,20 @@ ML/cmm/m/it/9.5 u$ \OT1/cmr/m/n/9.5 is called a $\OML/cmm/m/it/9.5 redundant []
 node$
  []
 
-[7] [8]
+[7] [8] [9]
 File: 1000-1-4.eps Graphic file (type eps)
  <1000-1-4.eps>
 File: 5000-d0.eps Graphic file (type eps)
  <5000-d0.eps>
-Overfull \hbox (1.88892pt too wide) in paragraph at lines 498--501
+Overfull \hbox (1.88892pt too wide) in paragraph at lines 513--516
 [][][] [] 
  []
 
-[9]
 File: 200-500-3.eps Graphic file (type eps)
- <200-500-3.eps>
+<200-500-3.eps>
 File: 200-500-4.eps Graphic file (type eps)
  <200-500-4.eps>
-Overfull \hbox (1.88892pt too wide) in paragraph at lines 506--509
+Overfull \hbox (1.88892pt too wide) in paragraph at lines 521--524
 [][][] [] 
  []
 
@@ -315,7 +314,7 @@ File: 2000-5000-10000.eps Graphic file (type eps)
 <2000-5000-10000.eps>
 File: 5000-1-4.eps Graphic file (type eps)
  <5000-1-4.eps>
-Overfull \hbox (1.88892pt too wide) in paragraph at lines 514--517
+Overfull \hbox (1.88892pt too wide) in paragraph at lines 529--532
 [][][] [] 
  []
 
@@ -323,31 +322,30 @@ File: real-d0.eps Graphic file (type eps)
 <real-d0.eps>
 File: real-time.eps Graphic file (type eps)
  <real-time.eps>
-Overfull \hbox (1.88892pt too wide) in paragraph at lines 522--525
+Overfull \hbox (1.88892pt too wide) in paragraph at lines 537--540
 [][][]  [] 
  []
 
-[10] [11]
+[10] [11] [12]
 
-LaTeX Warning: Reference `fig:e1:h' on page 12 undefined on input line 566.
+LaTeX Warning: Reference `fig:e1:h' on page 13 undefined on input line 581.
 
 
-LaTeX Warning: Reference `fig:e1:i' on page 12 undefined on input line 570.
+LaTeX Warning: Reference `fig:e1:i' on page 13 undefined on input line 585.
 
 File: our-wang.eps Graphic file (type eps)
 <our-wang.eps>
 File: our-wang-time.eps Graphic file (type eps)
  <our-wang-time.eps>
-Overfull \hbox (1.88892pt too wide) in paragraph at lines 577--580
+Overfull \hbox (1.88892pt too wide) in paragraph at lines 592--595
 [][][]  [] 
  []
 
-[12] [13]
-(D:\360data\重要数据\我的文档\GitHub\puc2016\ShiPuc2016-151027.bbl
+[13] (D:\360data\重要数据\我的文档\GitHub\puc2016\ShiPuc2016-151027.bbl
+[14]
 Missing character: There is no � in font cmr8!
 Missing character: There is no � in font cmr8!
 
-[14]
 Underfull \hbox (badness 10000) in paragraph at lines 101--104
 [][]\OT1/cmr/m/n/8 Time-bounded pos-i-tive in-flu-ence in so-cial net-work-s.  
 URL http-
@@ -360,12 +358,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3105 strings out of 495355
- 41549 string characters out of 3183881
+ 3106 strings out of 495355
+ 41555 string characters out of 3183881
  96427 words of memory out of 3000000
- 6227 multiletter control sequences out of 15000+200000
+ 6228 multiletter control sequences out of 15000+200000
  16390 words of font info for 61 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,14n,24p,1458b,316s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,14n,24p,1458b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on ShiPuc2016-151027.dvi (15 pages, 67988 bytes).
+Output written on ShiPuc2016-151027.dvi (15 pages, 70364 bytes).

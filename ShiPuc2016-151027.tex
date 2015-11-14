@@ -362,6 +362,21 @@ Whether a node is a redundant node or not depends on the property of its neighbo
 The example of our algorithm is in technique report \cite{ShiTech}.
 \subsubsection*{Performance Guarantee}
 According to Theorem 1, the $tPIDS$ problem is NP-Hard. Our greedy algorithm runs in $O(D^2*|V|^2)$ where $D$ is the maximum degree and $|V|$ is the number of the nodes in a network. The extensive evaluation results also show that the performance and efficiency of our algorithm are convincing.
+\subsection{An implement of Move-Down Algorithm}
+The size of the social network are becoming very large these days. How to deal with the social network with large size is an important problem for Move-Down algorithm. One serious problem is that, with the size of the input network grows, the running time of our algorithm grows faster. We proposed a kind of Divide and Conquer algorithm to solve this problem.  At first, we divide the whole network $G(V, E)$ into several clusters $\{c_1,c_2,...,c_n\}$ where the value of $n$ is based on the clustering algorithm we choose. Then we can select influence nodes in each cluster, considering that, the nodes in the same cluster are interrelated with each other closely. The influence set for each cluster $c_i(1\le i \le n)$ denoted by $Inf_{i}$.  At last, we obtain the influence set for the whole network by combine the set in $\{Inf_{i}|1\le i \le n\}$ together and we have $D_0= \bigcup_{1\le i \le n} Inf_{i}$. The detail of the implement algorithm is as follows.
+\begin{algorithm}[!htb]
+	\label{alg2}
+	\caption{Implement Algorithm}
+	\begin{algorithmic}[1] %
+		\Require Graph $G=(V,E)$, $t$: the spreading times
+		\Ensure The set of initial influence nodes $D_0$
+		\State Cluster $G$ based on a clustering algorithm, and obtain the cluster set $C=\{c1,c2,...,cn\}$.
+		\State For each set $c_i \in C$, let $Inf_i= Move-Down(c_i, t)$.
+		\State Let $D_0=\{Inf_i | 1 \le i \le n\}$.
+		\State Output $D_0$.
+	\end{algorithmic}
+\end{algorithm}
+\vspace{-1cm}
 \subsection{The Correctness of the Move-Down Algorithm}
 Now we prove the result returned by our greedy algorithm is feasible. The proofs of these theorems are in our technique report\cite{ShiTech} .
 Firstly, we will show as long as all the nodes in a $t$ SPREAD graph satisfy Formula (1), $D_0$ is a valid $tPIDS$.
